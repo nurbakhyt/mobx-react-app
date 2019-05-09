@@ -13,18 +13,18 @@ class Container extends React.Component {
     return (
       <div className="container">
         {items.map((item, i) => {
-          if (item.type === 'box') {
-            return <Box
-              key={i}
-              box={item}
-            />
-          } else if (item.type === 'container') {
+          if (item.type === 'container') {
             return <Container
               key={i}
               items={item.items}
               addItem={addItem}
             />
           }
+
+          return <Box
+            key={i}
+            box={item}
+          />
         })}
         <AddBtn addItem={addItem}/>
       </div>
