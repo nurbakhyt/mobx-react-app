@@ -1,0 +1,32 @@
+.btn {
+    background-color: #eee;
+    border: 1px solid #999;
+    border-radius: 0.5em;
+    cursor: pointer;
+    margin-right: 0.5em;
+    min-width: 6em;
+    padding: 1em;
+    text-align: center;
+}
+
+.btn:last-child {
+    margin-right: 0;
+}
+
+.add-btn-group:hover .float-btns,
+.add-btn-group:focus .float-btns {
+    display: flex;
+}
+
+.add-btn-group {
+    position: relative;
+}
+
+.float-btns {
+    display: none;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: -2.5em;
+    right: 50%;
+    transform: translateX(50%);
+}
