@@ -5,10 +5,16 @@ function AddBtn({addItem}) {
   return (
     <div className="add-btn-group">
       <div className="float-btns">
-        <button className="btn" onClick={() => addItem({type: 'box'})}>
+        <button
+          className="btn"
+          onClick={() => addItem({type: 'box'})}
+        >
           Box
         </button>
-        <button className="btn">
+        <button
+          className="btn"
+          onClick={() => addItem({type: 'container', items: []})}
+        >
           Container
         </button>
       </div>
