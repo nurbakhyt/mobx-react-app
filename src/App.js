@@ -1,39 +1,15 @@
 import React from 'react';
+import Devtools from 'mobx-react-devtools';
 import './App.css';
 import Container from './Container/Container';
 
-class App extends React.Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      type: 'container',
-      items: []
-    };
-
-    this.addItem = this.addItem.bind(this);
-  }
-
-  addItem (item) {
-    this.setState({
-      items: [
-        ...this.state.items,
-        item
-      ]
-    });
-  }
-
-  render() {
-    return (
-      <div className="app">
-        <Container
-          items={this.state.items}
-          addItem={this.addItem}
-        />
-      </div>
-    );
-  }
+function App({store}) {
+  return (
+    <div className="app">
+      <Devtools />
+      <Container container={store.items[0]}/>
+    </div>
+  )
 }
 
 export default App;

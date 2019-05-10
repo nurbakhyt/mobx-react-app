@@ -1,19 +1,19 @@
 import React from 'react';
 import './addBtn.css';
 
-function AddBtn({addItem}) {
+function AddBtn({container}) {
   return (
     <div className="add-btn-group">
       <div className="float-btns">
         <button
           className="btn"
-          onClick={() => addItem({type: 'box'})}
+          onClick={() => container.items.push({type: 'box'})}
         >
           Box
         </button>
         <button
           className="btn"
-          onClick={() => addItem({type: 'container', items: []})}
+          onClick={() => container.items.push({type: 'container', items: []})}
         >
           Container
         </button>

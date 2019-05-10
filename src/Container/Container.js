@@ -1,23 +1,21 @@
 import React from 'react';
+import {observer} from 'mobx-react';
 import './container.css';
 import AddBtn from '../Btn/AddBtn';
 import Box from '../Box/Box';
 
+@observer
 class Container extends React.Component {
   render() {
-    const {
-      items,
-      addItem
-    } = this.props;
+    const {container} = this.props;
 
     return (
       <div className="container">
-        {items.map((item, i) => {
+        {container.items.map((item, i) => {
           if (item.type === 'container') {
             return <Container
               key={i}
-              items={item.items}
-              addItem={addItem}
+              container={item}
             />
           }
 
@@ -26,7 +24,7 @@ class Container extends React.Component {
             box={item}
           />
         })}
-        <AddBtn addItem={addItem}/>
+        <AddBtn container={container}/>
       </div>
     )
   }
