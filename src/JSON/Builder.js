@@ -44,7 +44,7 @@ class Builder extends React.Component {
           onChange={this.onChange.bind(this)}
         />
         <button
-          className="builder-btn btn"
+          className="btn"
           onClick={this.build.bind(this)}
         >Build</button>
       </section>
