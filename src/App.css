@@ -1,7 +1,12 @@
 .app {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 300px;
   width: 100%;
+}
+
+.app > .container {
+  margin-bottom: 2em;
 }

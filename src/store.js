@@ -1,12 +1,16 @@
-import {observable} from 'mobx';
+import {observable, action} from 'mobx';
 
 class Store {
-  @observable items = [
+  @observable root = [
     {
       type: 'container',
       items: []
     }
   ];
+
+  @action.bound setStore(newStore) {
+    this.root = newStore;
+  }
 }
 
 export default Store;

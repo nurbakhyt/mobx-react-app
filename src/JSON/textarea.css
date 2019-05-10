@@ -1,0 +1,7 @@
+.text-box {
+    padding: 0.5em;
+}
+
+.text-box__error {
+    border: 1px solid red;
+}

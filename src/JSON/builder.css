@@ -1,0 +1,12 @@
+.builder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    width: 100%;
+}
+
+.builder > .text-box {
+    flex-basis: 50%;
+    margin-right: 1em;
+}
