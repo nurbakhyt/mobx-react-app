@@ -1,5 +1,6 @@
 .box {
     background-color: #2a4;
+    cursor: pointer;
     height: 3em;
     width: 3em;
     margin: 0.5em;

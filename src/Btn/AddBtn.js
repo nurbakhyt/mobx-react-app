@@ -7,7 +7,7 @@ function AddBtn({container}) {
       <div className="float-btns">
         <button
           className="btn"
-          onClick={() => container.items.push({type: 'box'})}
+          onClick={() => container.items.push({type: 'box', color: 'orange'})}
         >
           Box
         </button>
