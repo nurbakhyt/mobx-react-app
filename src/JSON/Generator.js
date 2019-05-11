@@ -1,5 +1,5 @@
 import React from 'react';
-import {inject} from 'mobx-react';
+import {inject, PropTypes} from 'mobx-react';
 import './generator.css';
 
 @inject('store')
@@ -27,5 +27,9 @@ class Generator extends React.Component {
     )
   }
 }
+
+Generator.propTypes = {
+  store: PropTypes.observableObject
+};
 
 export default Generator;

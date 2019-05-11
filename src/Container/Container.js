@@ -1,5 +1,5 @@
 import React from 'react';
-import {observer} from 'mobx-react';
+import {observer, PropTypes} from 'mobx-react';
 import './container.css';
 import AddBtn from '../Btn/AddBtn';
 import Box from '../Box/Box';
@@ -29,5 +29,9 @@ class Container extends React.Component {
     )
   }
 }
+
+Container.propTypes = {
+  container: PropTypes.observableObject
+};
 
 export default Container;

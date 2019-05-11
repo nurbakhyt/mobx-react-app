@@ -1,5 +1,5 @@
 import React from 'react';
-import {observer} from 'mobx-react';
+import {observer, PropTypes} from 'mobx-react';
 import './box.css';
 
 @observer
@@ -30,5 +30,9 @@ class Box extends React.Component {
     )
   }
 }
+
+Box.propTypes = {
+  box: PropTypes.observableObject
+};
 
 export default Box;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {inject} from 'mobx-react';
+import {inject, PropTypes} from 'mobx-react';
 import './builder.css';
 import './textarea.css';
 
@@ -53,5 +53,9 @@ class Builder extends React.Component {
     )
   }
 }
+
+Builder.propTypes = {
+  store: PropTypes.observableObject
+};
 
 export default Builder;
