@@ -6,13 +6,13 @@ import Container from './Container/Container';
 import Builder from './JSON/Builder';
 import Generator from './JSON/Generator';
 
-const App = observer(({store}) => {
+const App = observer(['store'],({store}) => {
   return (
     <div className="app">
       <Devtools />
-      <Container container={store.root[0]}/>
-      <Builder setStore={store.setStore} />
-      <Generator data={store.root} />
+      <Container container={store.root[0]} />
+      <Builder />
+      <Generator />
     </div>
   )
 });

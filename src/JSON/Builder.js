@@ -1,7 +1,9 @@
 import React from 'react';
+import {inject} from 'mobx-react';
 import './builder.css';
 import './textarea.css';
 
+@inject('store')
 class Builder extends React.Component {
 
   state = {
@@ -28,7 +30,7 @@ class Builder extends React.Component {
     if (this.validate(str)) {
       this.setState({error: false});
       const json = JSON.parse(str);
-      this.props.setStore(json);
+      this.props.store.setStore(json);
     } else {
       this.setState({error: true});
     }
